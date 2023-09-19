@@ -28,7 +28,7 @@ int main(){
     {
         for (int j = 0; j < C; j++)
         {
-            if (j == C-1)
+            if (j == C)
             {
                 printf("\n");
             }
@@ -45,6 +45,11 @@ int main(){
             for (int k = 0; k < L*C; k++)
             {
                 tab[k] = T[i][j];
+                if (tab[k]==tab[k-1])
+                {
+                    continue;
+                }
+                
                 printf("%d ", tab[k]);
             }
             
